@@ -2,7 +2,7 @@
 This is our main driver file. It will be responsible for handling user input and displaying the current GameState object.
 """
 import pygame as p
-import ChessEngine, ChessAI, DialogBox
+import ChessEngine, ChessAI
 
 WIDTH = HEIGHT = 512  #  400 is another option
 DIMENSION = 8  #  dimensions of a chess board are 8x8
@@ -38,8 +38,8 @@ def main():
 
 
 
-    playerOne = '' #if a human is playing white then true, if ai then false
-    playerTwo = '' #if a human is playing black then true, if ai then false
+    playerOne = True #if a human is playing white then true, if ai then false
+    playerTwo = False #if a human is playing black then true, if ai then false
     while running:
         humanTurn = (gs.whiteToMove and playerOne) or (not gs.whiteToMove and playerTwo)
         for e in p.event.get():
