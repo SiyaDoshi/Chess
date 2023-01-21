@@ -190,7 +190,7 @@ def animateMove(move, screen, board, clock):
         clock.tick(60)
 
 def drawText(screen, text):
-    font = p.font.SysFont("Times New Roman", 30, True, False)
+    font = p.font.SysFont("Times New Roman", 45, True, False)
     textObject = font.render(text, 0, p.Color('White'))
     textLocation = p.Rect(0, 0, WIDTH, HEIGHT).move(WIDTH/2 - textObject.get_width()/2, HEIGHT/2 - textObject.get_height()/2)
     screen.blit(textObject, textLocation)
