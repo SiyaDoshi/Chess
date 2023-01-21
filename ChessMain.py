@@ -1,5 +1,6 @@
 """
 This is our main driver file. It will be responsible for handling user input and displaying the current GameState object.
+@author: Siya Doshi
 """
 import pygame as p
 import ChessEngine, ChessAI
