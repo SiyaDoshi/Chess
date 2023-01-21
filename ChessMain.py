@@ -11,10 +11,6 @@ SQ_SIZE = HEIGHT // DIMENSION
 MAX_FPS = 15  # for animations later on
 IMAGES = {}
 
-
-def test_function():
-    return "Hello"
-
 """
 Initialize a global dictionary of images. This will be called exactly once in the main
 """
