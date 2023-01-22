@@ -40,7 +40,7 @@ def main():
 
 
     playerOne = True #if a human is playing white then true, if ai then false
-    playerTwo = False #if a human is playing black then true, if ai then false
+    playerTwo = True #if a human is playing black then true, if ai then false
     while running:
         humanTurn = (gs.whiteToMove and playerOne) or (not gs.whiteToMove and playerTwo)
         for e in p.event.get():
@@ -190,7 +190,7 @@ def animateMove(move, screen, board, clock):
         clock.tick(60)
 
 def drawText(screen, text):
-    font = p.font.SysFont("Times New Roman", 45, True, False)
+    font = p.font.SysFont("Arial", 45, True, False)
     textObject = font.render(text, 0, p.Color('White'))
     textLocation = p.Rect(0, 0, WIDTH, HEIGHT).move(WIDTH/2 - textObject.get_width()/2, HEIGHT/2 - textObject.get_height()/2)
     screen.blit(textObject, textLocation)
