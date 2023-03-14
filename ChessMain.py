@@ -40,7 +40,7 @@ def main():
 
 
     playerOne = True #if a human is playing white then true, if ai then false
-    playerTwo = True #if a human is playing black then true, if ai then false
+    playerTwo = False #if a human is playing black then true, if ai then false
     while running:
         humanTurn = (gs.whiteToMove and playerOne) or (not gs.whiteToMove and playerTwo)
         for e in p.event.get():
@@ -86,7 +86,9 @@ def main():
 
         #AI move finder
         if not gameOver and not humanTurn:
-            AIMove = ChessAI.findRandomMove(validMoves)
+            AIMove = ChessAI.findBestMove(gs, validMoves)
+            if AIMove is None:
+                AIMove = ChessAI.findRandomMove(validMoves)
             gs.makeMove(AIMove)
             moveMade = True
             animate = True
